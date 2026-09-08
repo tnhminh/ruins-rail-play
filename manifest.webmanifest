@@ -1,0 +1,27 @@
+{
+  "id": "./",
+  "name": "RUINS RAIL",
+  "short_name": "RUINS RAIL",
+  "description": "An original browser-native 3D endless mine-cart runner through forgotten sun mines.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#06100d",
+  "theme_color": "#09120f",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    {
+      "src": "./ruins-rail-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./ruins-rail-icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

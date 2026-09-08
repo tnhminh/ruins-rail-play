@@ -1,0 +1,280 @@
+{
+  "schemaVersion": 1,
+  "gameplay": {
+    "baseSpeed": 8,
+    "jumpVelocity": 9.6,
+    "gravity": 22,
+    "laneChangeBaseSeconds": 0.235,
+    "laneChangeMinSeconds": 0.17,
+    "pickupContactDistance": 0.5,
+    "jumpSafeHeight": 0.62,
+    "reviveInvulnerabilitySeconds": 3,
+    "segmentRecycleBehindMeters": 70,
+    "maxHearts": 3,
+    "hitInvulnerabilitySeconds": 0.85,
+    "reviveHearts": 2,
+    "junctionAutoFollow": true,
+    "junctionCaptureLeadMeters": 0.35,
+    "junctionCaptureTolerance": 0.72
+  },
+  "scoring": {
+    "travelPointsPerMeter": 12,
+    "cleanTierMeters": 75,
+    "cleanTierIncrement": 0.25,
+    "maxMultiplier": 6,
+    "cleanMilestoneMeters": 100,
+    "cleanMilestonePoints": 250,
+    "hitCleanPenaltyMeters": 90,
+    "bossBasePoints": 900
+  },
+  "powerups": {
+    "magnetBaseSeconds": 8,
+    "shieldBaseSeconds": 10,
+    "scoreBoostBaseSeconds": 8,
+    "railSurgeBaseSeconds": 5,
+    "railSurgeSpeedBonus": 4,
+    "timeWarpBaseSeconds": 5.5,
+    "timeWarpSpeedScale": 0.72,
+    "wardenPulseBaseSeconds": 6,
+    "wardenPulseGapBonus": 3.5,
+    "magnetRangeMeters": 6.5
+  },
+  "warden": {
+    "initialGap": 12,
+    "captureGap": 5.5,
+    "closeGap": 8.8,
+    "closingGap": 10.4,
+    "criticalGap": 6.6,
+    "bossPressureMultiplier": 1.18,
+    "pulseReliefMultiplier": 1.18
+  },
+  "camera": {
+    "baseFov": 52,
+    "speedFovFactor": 0.72,
+    "chaseHeight": 4.15,
+    "chaseDistance": 10.8,
+    "baseLookAhead": 10.5,
+    "dangerLookAhead": 12.5,
+    "bossLookAhead": 14.5,
+    "bossPullback": 1.15,
+    "bossFovBonus": 3.2,
+    "dangerFovBonus": 1.2
+  },
+  "content": {
+    "segmentLength": 30,
+    "activeSegments": 9,
+    "junctionStartSerial": 3,
+    "junctionEvery": 5,
+    "signatureStartSerial": 7,
+    "signatureEvery": 6,
+    "sideSetpieceStartSerial": 10,
+    "sideSetpieceEvery": 7,
+    "powerupStartSerial": 2,
+    "powerupEvery": 5
+  },
+  "weather": {
+    "enabled": true,
+    "globalOpacityMultiplier": 1,
+    "sunlitMode": "pollen",
+    "crystalMode": "snow",
+    "emberMode": "embers",
+    "vaultMode": "rain"
+  },
+  "audio": {
+    "musicStepMs": 420,
+    "defaultMasterVolume": 78,
+    "defaultMusicVolume": 48,
+    "defaultSfxVolume": 82,
+    "pickupVolumeMultiplier": 1
+  },
+  "features": {
+    "wardenEnabled": true,
+    "bossTrialsEnabled": true,
+    "weatherEnabled": true,
+    "sideExpeditionsEnabled": true,
+    "powerupsEnabled": true,
+    "onlineLeaderboardEnabled": true
+  },
+  "multiplayer": {
+    "enabled": true,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "countdownSeconds": 3,
+    "raceDurationSeconds": 90,
+    "stateHz": 15,
+    "ghostOpacity": 0.38
+  },
+  "stages": {
+    "sunlitRuins": { "scoreMultiplier": 1, "shardValue": 42, "targetDistance": 450, "targetScore": 9000, "targetShards": 40, "rewardMultiplier": 1, "speedCap": 18, "speedGrowth": 210, "wardenPressure": 0.95, "background": 12573896, "fog": 14281436, "fogDensity": 0.0068, "hemiSky": 16774879, "hemiGround": 11782320, "hemiIntensity": 2.15, "sun": 16770488, "sunIntensity": 4.3, "exposure": 1.32, "accent": 16170383, "accent2": 7650724 },
+    "crystalHollows": { "scoreMultiplier": 1.15, "shardValue": 46, "targetDistance": 550, "targetScore": 13000, "targetShards": 55, "rewardMultiplier": 1.15, "speedCap": 19, "speedGrowth": 200, "wardenPressure": 1, "background": 12179946, "fog": 14412532, "fogDensity": 0.0085, "hemiSky": 15857663, "hemiGround": 11912408, "hemiIntensity": 2, "sun": 14283775, "sunIntensity": 4, "exposure": 1.35, "accent": 11061503, "accent2": 12298222 },
+    "emberworks": { "scoreMultiplier": 1.3, "shardValue": 50, "targetDistance": 650, "targetScore": 18000, "targetShards": 70, "rewardMultiplier": 1.3, "speedCap": 20.5, "speedGrowth": 185, "wardenPressure": 1.07, "background": 15911158, "fog": 16244176, "fogDensity": 0.0088, "hemiSky": 16773333, "hemiGround": 13807780, "hemiIntensity": 2, "sun": 16766125, "sunIntensity": 4.25, "exposure": 1.36, "accent": 15966085, "accent2": 16041322 },
+    "wardenVault": { "scoreMultiplier": 1.5, "shardValue": 55, "targetDistance": 750, "targetScore": 25000, "targetShards": 85, "rewardMultiplier": 1.5, "speedCap": 22, "speedGrowth": 170, "wardenPressure": 1.15, "background": 13354469, "fog": 14868209, "fogDensity": 0.0095, "hemiSky": 16249343, "hemiGround": 12104911, "hemiIntensity": 2.05, "sun": 14996991, "sunIntensity": 4.15, "exposure": 1.38, "accent": 12363752, "accent2": 9426375 }
+  },
+  "runModes": {
+    "expedition": { "unlockStars": 0, "scoreMultiplier": 1, "rewardMultiplier": 1, "speedMultiplier": 1, "wardenPressure": 1, "allowsRevive": true, "bossInterval": 500 },
+    "dailySprint": { "unlockStars": 2, "scoreMultiplier": 1.15, "rewardMultiplier": 1.2, "speedMultiplier": 1.04, "wardenPressure": 1.05, "allowsRevive": true, "bossInterval": 440 },
+    "ironRail": { "unlockStars": 5, "scoreMultiplier": 1.25, "rewardMultiplier": 1.35, "speedMultiplier": 1.06, "wardenPressure": 1.12, "allowsRevive": false, "bossInterval": 380 },
+    "wardenRush": { "unlockStars": 8, "scoreMultiplier": 1.4, "rewardMultiplier": 1.5, "speedMultiplier": 1.08, "wardenPressure": 1.35, "allowsRevive": false, "bossInterval": 300 }
+  },
+  "sideExpeditions": {
+    "mainline": { "scoreMultiplier": 1, "rewardMultiplier": 1, "speedMultiplier": 1, "wardenPressure": 1, "bossIntervalMultiplier": 1, "weatherIntensity": 1, "shardValueBonus": 0, "cleanStepMultiplier": 1, "allowsReviveOverride": true },
+    "relicRush": { "scoreMultiplier": 1.08, "rewardMultiplier": 1.2, "speedMultiplier": 0.99, "wardenPressure": 1, "bossIntervalMultiplier": 1.18, "weatherIntensity": 1.05, "shardValueBonus": 12, "cleanStepMultiplier": 1, "allowsReviveOverride": true },
+    "stormTrial": { "scoreMultiplier": 1.2, "rewardMultiplier": 1.28, "speedMultiplier": 1.08, "wardenPressure": 1.08, "bossIntervalMultiplier": 0.9, "weatherIntensity": 1.65, "shardValueBonus": 4, "cleanStepMultiplier": 0.95, "allowsReviveOverride": true },
+    "wardenGauntlet": { "scoreMultiplier": 1.35, "rewardMultiplier": 1.45, "speedMultiplier": 1.05, "wardenPressure": 1.28, "bossIntervalMultiplier": 0.48, "weatherIntensity": 1.15, "shardValueBonus": 6, "cleanStepMultiplier": 0.9, "allowsReviveOverride": false },
+    "perfectLine": { "scoreMultiplier": 1.25, "rewardMultiplier": 1.32, "speedMultiplier": 1.04, "wardenPressure": 1.1, "bossIntervalMultiplier": 0.82, "weatherIntensity": 0.9, "shardValueBonus": 2, "cleanStepMultiplier": 0.7, "allowsReviveOverride": true }
+  },
+  "economy": {
+    "upgradeBaseCost": 70,
+    "upgradeStepCost": 70,
+    "maxUpgradeLevel": 3,
+    "starCurrencyReward": 20,
+    "threeStarBonus": 35,
+    "bossCurrencyReward": 35
+  },
+  "characters": {
+    "sunScout": { "shardScoreMultiplier": 1.08, "magnetBonusSeconds": 1, "shieldBonusSeconds": 0, "guardianHitPenalty": 3.8 },
+    "deepDelver": { "shardScoreMultiplier": 1, "magnetBonusSeconds": 0, "shieldBonusSeconds": 2, "guardianHitPenalty": 3.05 }
+  },
+  "relicItems": {
+    "relicCompass": { "cost": 180, "warningRangeBonus": 4 },
+    "streakCharm": { "cost": 240, "cleanStepMultiplier": 0.85 },
+    "guardianWard": { "cost": 320, "guardianPenaltyMultiplier": 0.8 },
+    "stormLantern": { "cost": 220, "weatherOpacityMultiplier": 0.65 },
+    "shardSatchel": { "cost": 300, "shardScoreMultiplier": 1.12 },
+    "boostCoil": { "cost": 420, "powerupDurationMultiplier": 1.12 }
+  },
+  "cosmetics": {
+    "cartSkins": {
+      "relicCopper": { "cost": 0, "cart": 15114628, "edge": 10907510, "brass": 15056245 },
+      "mintRunner": { "cost": 260, "cart": 10475204, "edge": 6655881, "brass": 14272917 },
+      "sunsetForge": { "cost": 380, "cart": 15706771, "edge": 12088945, "brass": 15777919 },
+      "vaultRoyal": { "cost": 560, "cart": 12825823, "edge": 8484255, "brass": 14732012 }
+    },
+    "trails": {
+      "none": { "cost": 0, "color": 16777215 },
+      "mintSpark": { "cost": 180, "color": 9756616 },
+      "sunGold": { "cost": 260, "color": 16042883 },
+      "lilacMist": { "cost": 340, "color": 13088239 }
+    }
+  },
+  "missions": {
+    "distance-50": { "target": 50, "reward": 60 },
+    "shards-12": { "target": 12, "reward": 80 },
+    "score-1000": { "target": 1000, "reward": 100 },
+    "runs-3": { "target": 3, "reward": 120 },
+    "clears-1": { "target": 1, "reward": 150 },
+    "stars-6": { "target": 6, "reward": 180 }
+  },
+  "achievements": {
+    "first-descent": { "target": 1, "reward": 100 },
+    "star-cartographer": { "target": 6, "reward": 260 },
+    "shard-vault": { "target": 250, "reward": 320 },
+    "clean-machine": { "target": 500, "reward": 420 },
+    "boss-breaker": { "target": 3, "reward": 420 },
+    "score-legend": { "target": 50000, "reward": 520 },
+    "vault-master": { "target": 3, "reward": 800 }
+  },
+  "questCalendar": {
+    "dailyRotationCount": 3,
+    "weeklyRotationCount": 3,
+    "dailyPool": {
+      "daily-distance-300": { "enabled": true, "title": "Ride 300 m today", "metric": "distance", "target": 300, "reward": 70 },
+      "daily-shards-25": { "enabled": true, "title": "Recover 25 shards today", "metric": "shards", "target": 25, "reward": 80 },
+      "daily-score-5000": { "enabled": true, "title": "Bank 5,000 score today", "metric": "score", "target": 5000, "reward": 90 },
+      "daily-runs-2": { "enabled": true, "title": "Launch 2 runs today", "metric": "runs", "target": 2, "reward": 70 },
+      "daily-powerups-4": { "enabled": true, "title": "Collect 4 powerups today", "metric": "powerups", "target": 4, "reward": 90 },
+      "daily-boss-1": { "enabled": true, "title": "Survive a Warden Trial today", "metric": "bosses", "target": 1, "reward": 120 }
+    },
+    "weeklyPool": {
+      "weekly-distance-2500": { "enabled": true, "title": "Ride 2,500 m this week", "metric": "distance", "target": 2500, "reward": 260 },
+      "weekly-shards-180": { "enabled": true, "title": "Recover 180 shards this week", "metric": "shards", "target": 180, "reward": 300 },
+      "weekly-score-50000": { "enabled": true, "title": "Bank 50,000 score this week", "metric": "score", "target": 50000, "reward": 320 },
+      "weekly-clears-3": { "enabled": true, "title": "Clear 3 expeditions this week", "metric": "clears", "target": 3, "reward": 360 },
+      "weekly-powerups-15": { "enabled": true, "title": "Collect 15 powerups this week", "metric": "powerups", "target": 15, "reward": 320 },
+      "weekly-bosses-3": { "enabled": true, "title": "Survive 3 Warden Trials this week", "metric": "bosses", "target": 3, "reward": 420 }
+    }
+  },
+  "dropTables": {
+    "magnetWeight": 1,
+    "shieldWeight": 1,
+    "scoreBoostWeight": 1,
+    "railSurgeWeight": 1,
+    "timeWarpWeight": 1,
+    "wardenPulseWeight": 1
+  },
+  "spawnPatterns": {
+    "difficulty0": "warmup,singleDodge,jumpArc,duckGate",
+    "difficulty1": "singleDodge,jumpArc,duckGate,oncomingEscape,riskReward",
+    "difficulty2": "jumpArc,duckGate,oncomingEscape,zigzag,riskReward,doubleBlock",
+    "difficulty3": "oncomingEscape,zigzag,riskReward,doubleBlock,jumpArc,duckGate",
+    "difficulty4": "zigzag,doubleBlock,oncomingEscape,riskReward,jumpArc,duckGate",
+    "enabled": {
+      "warmup": true,
+      "singleDodge": true,
+      "jumpArc": true,
+      "duckGate": true,
+      "oncomingEscape": true,
+      "zigzag": true,
+      "riskReward": true,
+      "doubleBlock": true
+    }
+  },
+  "stageTimeline": {
+    "sunlitRuins": {
+      "beat1": { "enabled": false, "meter": 180, "kind": "pattern", "value": "riskReward" },
+      "beat2": { "enabled": false, "meter": 360, "kind": "powerup", "value": "magnet" }
+    },
+    "crystalHollows": {
+      "beat1": { "enabled": false, "meter": 220, "kind": "pattern", "value": "jumpArc" },
+      "beat2": { "enabled": false, "meter": 440, "kind": "powerup", "value": "timeWarp" }
+    },
+    "emberworks": {
+      "beat1": { "enabled": false, "meter": 260, "kind": "pattern", "value": "oncomingEscape" },
+      "beat2": { "enabled": false, "meter": 520, "kind": "powerup", "value": "railSurge" }
+    },
+    "wardenVault": {
+      "beat1": { "enabled": false, "meter": 300, "kind": "pattern", "value": "doubleBlock" },
+      "beat2": { "enabled": false, "meter": 600, "kind": "powerup", "value": "wardenPulse" }
+    }
+  },
+  "campaigns": {
+    "relicFestival": {
+      "enabled": false,
+      "name": "Relic Festival",
+      "startAt": "2026-09-01T00:00:00+07:00",
+      "endAt": "2026-09-08T00:00:00+07:00",
+      "announcement": "Bonus score and star currency for the Relic Festival.",
+      "overrides": {
+        "scoring": { "travelPointsPerMeter": 14 },
+        "economy": { "starCurrencyReward": 25 }
+      }
+    }
+  },
+  "segments": {
+    "all": { "enabled": true, "rolloutPercent": 100 },
+    "newRiders": { "enabled": true, "rolloutPercent": 35 },
+    "veterans": { "enabled": true, "rolloutPercent": 20 }
+  },
+  "experiments": {
+    "enabled": true,
+    "salt": "ruins-rail-v1",
+    "items": {
+      "fastOpening": {
+        "enabled": false,
+        "targetSegment": "all",
+        "rolloutPercent": 20,
+        "variantBPercent": 50,
+        "variantBName": "FAST OPENING",
+        "overrides": { "gameplay": { "baseSpeed": 8.5 } }
+      },
+      "richerStars": {
+        "enabled": false,
+        "targetSegment": "veterans",
+        "rolloutPercent": 20,
+        "variantBPercent": 50,
+        "variantBName": "RICHER STARS",
+        "overrides": { "economy": { "starCurrencyReward": 24 } }
+      }
+    }
+  }
+}

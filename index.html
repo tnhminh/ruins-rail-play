@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#bfdcc8" />
+  <meta name="description" content="RUINS RAIL — an original browser-native 3D endless mine-cart runner." />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="RUINS RAIL" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./ruins-rail-icon.svg" type="image/svg+xml" />
+  <title>RUINS RAIL</title>
+  <script type="module" crossorigin src="/ruins-rail-play/assets/index-D0f-O2cd.js"></script>
+  <link rel="modulepreload" crossorigin href="/ruins-rail-play/assets/three-CpzWZkJ-.js">
+  <link rel="modulepreload" crossorigin href="/ruins-rail-play/assets/three-addons-ROWZYY0l.js">
+  <link rel="stylesheet" crossorigin href="/ruins-rail-play/assets/index-DhZkBgDE.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game"></canvas>
+    <div id="vignette"></div>
+    <section id="hud" class="hidden">
+      <div class="topline"><div><b id="score">0</b><span>SCORE</span></div><div class="center"><b id="multiplier">×1</b><span>CLEAN STREAK</span></div><div><b id="shards">◆ 0</b><span>SHARDS</span></div></div>
+      <div id="distance">0 m</div>
+      <div id="health" class="health" aria-label="Health"></div>
+      <div id="stageObjective"><b>SUNLIT RUINS</b><span>☆☆☆ · GENTLE CLIMB</span><small>0/450m · 0/9,000 pts · 0/40 shards</small></div>
+      <div id="power"></div>
+      <div id="warning" aria-live="polite"></div>
+      <div id="wardenStatus">WARDEN · DISTANT</div>
+      <div id="powerups"></div>
+      <div id="tutorial" aria-live="polite"></div>
+      <div id="multiplayerRaceHud" class="multiplayer-race-hud hidden"></div>
+      <div id="multiplayerCountdown" class="multiplayer-countdown hidden"></div>
+      <button id="pause" class="icon-btn">Ⅱ</button>
+    </section>
+    <section id="menu" class="screen active">
+      <div class="brand"><p>THE FORGOTTEN SUN MINES</p><h1>RUINS<br><em>RAIL</em></h1><div id="best">BEST 0 · ◆ 0</div></div>
+      <div class="run-config-row"><div id="stageSummary" class="stage-summary"><span>SELECTED EXPEDITION</span><b>SUNLIT RUINS</b><small>GENTLE CLIMB</small></div><div id="modeSummary" class="stage-summary mode-summary"><span>RUN MODE</span><b>EXPEDITION</b><small>STANDARD RELIC DESCENT</small></div><div id="sideSummary" class="stage-summary side-summary"><span>SIDE EXPEDITION</span><b>MAIN EXPEDITION</b><small>STANDARD MAP RULESET</small></div></div>
+      <button id="run" class="primary">RUN</button>
+      <div class="menu-config-actions"><button id="stageSelect" class="secondary stage-action">SELECT STAGE</button><button id="modeSelect" class="secondary stage-action">RUN MODE</button><button id="sideSelect" class="secondary stage-action">SIDE EXPEDITION</button></div>
+      <div class="menu-service-actions"><button id="multiplayer" class="secondary online-action">MULTIPLAYER</button><button id="meta" class="secondary menu-action">CONTROL DECK</button></div>
+      <div class="utility-actions"><button id="languageToggle" class="secondary language-action">TIẾNG VIỆT</button><button id="install" class="secondary install-action" hidden>INSTALL GAME</button></div>
+      <p class="controls">SWIPE / WASD · SWITCH RAIL · JUMP · DUCK</p>
+    </section>
+    <section id="stageScreen" class="screen"><div class="panel stage-panel"><p class="kicker">CHOOSE YOUR DESCENT</p><h2>EXPEDITIONS</h2><div id="stageGrid" class="stage-grid"></div><button id="stageClose" class="secondary">BACK</button></div></section>
+    <section id="modeScreen" class="screen"><div class="panel stage-panel mode-panel"><p class="kicker">SET THE RISK PROFILE</p><h2>RUN MODES</h2><div id="modeGrid" class="mode-grid"></div><button id="modeClose" class="secondary">BACK</button></div></section>
+    <section id="sideScreen" class="screen"><div class="panel stage-panel mode-panel"><p class="kicker">OPTIONAL CHALLENGE BOARD</p><h2>SIDE EXPEDITIONS</h2><div id="sideGrid" class="mode-grid side-grid"></div><button id="sideClose" class="secondary">BACK</button></div></section>
+    <section id="metaScreen" class="screen"><div class="panel meta-panel"><p class="kicker">RELIC CART OPERATIONS</p><h2>CONTROL DECK</h2><div id="metaContent"></div><button id="metaClose" class="secondary">BACK</button></div></section>
+    <section id="multiplayerScreen" class="screen"><div class="panel multiplayer-panel"><p class="kicker">ONLINE RAIL RACE</p><h2>MULTIPLAYER</h2><div id="multiplayerStatus" class="multiplayer-status">CONNECT TO RACE SERVICE</div><div id="multiplayerLobbyActions" class="multiplayer-lobby-actions"><button id="quickMatch" class="primary small">QUICK MATCH</button><button id="createPrivate" class="secondary online-card">CREATE PRIVATE ROOM</button><div class="room-code-join"><input id="roomCodeInput" maxlength="6" autocomplete="off" spellcheck="false" placeholder="ROOM CODE" aria-label="Room code"><button id="joinPrivate" class="secondary online-card">JOIN ROOM</button></div></div><div id="multiplayerRoom" class="multiplayer-room hidden"><div id="multiplayerRoomMeta"></div><div id="multiplayerPlayers" class="multiplayer-players"></div><button id="multiplayerReady" class="primary small">READY</button><button id="multiplayerLeave" class="secondary">LEAVE ROOM</button></div><button id="multiplayerClose" class="secondary">BACK</button></div></section>
+    <section id="multiplayerResultScreen" class="screen"><div class="panel multiplayer-result-panel"><p class="kicker">ONLINE RACE RESULT</p><h2>RACE COMPLETE</h2><div id="multiplayerResults" class="multiplayer-results"></div><button id="multiplayerRematch" class="primary small">REMATCH</button><button id="multiplayerResultLeave" class="secondary">LEAVE ROOM</button></div></section>
+    <section id="pauseScreen" class="screen"><div class="panel"><h2>PAUSED</h2><button id="resume" class="primary small">RESUME</button><button id="restartPause" class="secondary">RESTART</button></div></section>
+    <section id="reviveScreen" class="screen"><div class="panel"><p class="kicker">THE RELIC STILL BURNS</p><h2>REVIVE?</h2><div id="reviveReason"></div><button id="revive" class="primary small">REVIVE</button><button id="endRun" class="secondary">END RUN</button></div></section>
+    <section id="gameover" class="screen"><div class="panel"><p class="kicker">THE ANCIENT WARDEN CLOSES IN</p><h2>RUN ENDED</h2><div id="summary"></div><button id="again" class="primary small">RUN AGAIN</button><button id="home" class="secondary">HOME</button></div></section>
+    <div id="turnHint"></div>
+  </div>
+</body>
+</html>

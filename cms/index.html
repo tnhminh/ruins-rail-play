@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RUINS RAIL · Game Control Center</title>
+  <link rel="stylesheet" href="./cms.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">RR</span><div><b>RUINS RAIL</b><small>GAME CONTROL CENTER</small></div></div>
+      <nav id="nav"></nav>
+      <div class="sidebar-foot"><span id="accessBadge" class="badge">CONNECTING</span><small>Draft → Validate → Preview → Publish</small></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow">LIVE GAME CONFIGURATION</p><h1 id="sectionTitle">Dashboard</h1></div>
+        <div class="release-context">
+          <label><small>ENVIRONMENT</small><select id="environmentSelect"><option value="dev">DEV</option><option value="staging">STAGING</option><option value="prod">PROD</option></select></label>
+          <label><small>ACTOR</small><input id="actorInput" maxlength="64" value="GAME-DESIGNER" /></label>
+        </div>
+        <div class="top-actions">
+          <button id="previewBtn" class="ghost">PREVIEW</button>
+          <button id="saveBtn" class="secondary">SAVE DRAFT</button>
+          <button id="requestBtn" class="ghost">REQUEST APPROVAL</button>
+          <button id="approveBtn" class="ghost">APPROVE</button>
+          <button id="publishBtn" class="primary">PUBLISH</button>
+        </div>
+      </header>
+
+      <section id="statusStrip" class="status-strip five">
+        <article><span>ENVIRONMENT</span><b id="environmentState">DEV</b><small id="runtimeEnvironment">Runtime reads DEV</small></article>
+        <article><span>PUBLISHED</span><b id="publishedRevision">R0</b><small id="publishedTime">SOURCE DEFAULTS</small></article>
+        <article><span>DRAFT</span><b id="draftState">CLEAN</b><small id="draftTime">—</small></article>
+        <article><span>WORKFLOW</span><b id="workflowState">EDITING</b><small id="workflowDetail">Awaiting approval request</small></article>
+        <article><span>CONFIG HEALTH</span><b id="healthState">CHECKING</b><small id="healthDetail">Schema v1</small></article>
+      </section>
+
+      <section class="workspace">
+        <div class="editor-card">
+          <div class="editor-toolbar">
+            <div class="tabs"><button id="formTab" class="tab active">FORM</button><button id="rawTab" class="tab">RAW JSON</button></div>
+            <div class="tools"><input id="searchInput" placeholder="Filter fields…" /><button id="resetBtn" class="ghost small">RESET DRAFT</button></div>
+          </div>
+          <div id="formEditor" class="form-editor"></div>
+          <div id="rawEditor" class="raw-editor hidden"><textarea id="rawTextarea" spellcheck="false"></textarea><button id="applyRawBtn" class="secondary">APPLY JSON TO DRAFT</button></div>
+        </div>
+
+        <aside class="right-rail">
+          <section class="panel release-panel">
+            <p class="eyebrow">RELEASE CONTROL</p>
+            <h3>Approval & publish</h3>
+            <textarea id="publishNote" rows="3" maxlength="180" placeholder="Release note / approval context"></textarea>
+            <div class="release-buttons"><button id="requestSideBtn" class="ghost">REQUEST</button><button id="approveSideBtn" class="secondary">APPROVE</button><button id="publishSideBtn" class="primary">PUBLISH NOW</button></div>
+            <div class="schedule-box"><label>Schedule approved snapshot<input id="scheduleAt" type="datetime-local" /></label><button id="scheduleBtn" class="ghost">SCHEDULE RELEASE</button></div>
+            <div id="promotionControls" class="promotion-controls"></div>
+            <small>Editing a draft clears prior approval. PROD requires a different approver from the requester. Scheduled releases publish an immutable approved snapshot.</small>
+          </section>
+          <section class="panel">
+            <div class="panel-heading"><div><p class="eyebrow">CONFIG DIFF</p><h3 id="diffSummary">No changes</h3></div><button id="refreshDiffBtn" class="ghost small">REFRESH</button></div>
+            <div id="diffList" class="diff-list"></div>
+          </section>
+          <section class="panel">
+            <div class="panel-heading"><div><p class="eyebrow">VERSION HISTORY</p><h3>Immutable revisions</h3></div><button id="refreshBtn" class="ghost small">REFRESH</button></div>
+            <div id="history" class="history"></div>
+          </section>
+          <section class="panel">
+            <p class="eyebrow">SCHEDULED RELEASES</p><h3>Release queue</h3><div id="schedules" class="history"></div>
+          </section>
+          <section class="panel">
+            <p class="eyebrow">LIVE TELEMETRY</p><h3>Operations snapshot</h3><div id="telemetry" class="telemetry-grid"></div>
+          </section>
+          <section class="panel">
+            <p class="eyebrow">AUDIT LOG</p><h3>Recent control actions</h3><div id="audit" class="audit-list"></div>
+          </section>
+          <section class="panel security">
+            <p class="eyebrow">REMOTE ADMIN</p>
+            <h3>CMS Token</h3>
+            <input id="tokenInput" type="password" autocomplete="off" placeholder="Optional on localhost" />
+            <button id="tokenBtn" class="ghost">SAVE SESSION TOKEN</button>
+            <small>Local development may use loopback admin. Hardened deployments should disable loopback admin and use token-mapped RBAC roles (viewer/editor/approver/publisher) behind TLS + SSO/reverse proxy.</small>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="./cms.js"></script>
+</body>
+</html>

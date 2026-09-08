@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#c7dfcf" />
+  <title>RUINS RAIL · Device Certification</title>
+  <link rel="stylesheet" href="./device-cert.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">RUINS RAIL · RELEASE QA</p>
+      <h1>Real Device Certification</h1>
+      <p>Run this page on the same physical device/browser used to certify the game. No camera, microphone or location permission is requested.</p>
+    </header>
+    <section class="cards" id="autoChecks"></section>
+    <section class="panel">
+      <div class="heading"><div><p class="eyebrow">INTERACTION</p><h2>Touch / pointer probe</h2></div><b id="touchState">WAITING</b></div>
+      <div id="touchPad" class="touch-pad" tabindex="0">Tap, drag and swipe here</div>
+      <p id="touchDetail">No pointer input recorded yet.</p>
+    </section>
+    <section class="panel">
+      <div class="heading"><div><p class="eyebrow">MANUAL GAME GATES</p><h2>Physical-device checklist</h2></div><b id="manualScore">0 / 10</b></div>
+      <div id="manualChecks" class="checklist"></div>
+    </section>
+    <section class="panel">
+      <div class="heading"><div><p class="eyebrow">PERFORMANCE SAMPLE</p><h2>Browser frame pacing</h2></div><button id="benchmarkBtn">RUN 5S SAMPLE</button></div>
+      <p id="benchmarkState">Not sampled.</p>
+    </section>
+    <section class="panel">
+      <div class="heading"><div><p class="eyebrow">CERTIFICATE</p><h2>Export evidence</h2></div><b id="overallState">PENDING</b></div>
+      <textarea id="resultJson" readonly spellcheck="false"></textarea>
+      <div class="actions">
+        <button id="refreshBtn">REFRESH</button>
+        <button id="copyBtn">COPY JSON</button>
+        <a class="button" href="../" target="_blank" rel="noopener">OPEN GAME</a>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./device-cert.js"></script>
+</body>
+</html>
